@@ -30,7 +30,6 @@ public class GorillaMontaña extends Primates {
         if (IQ < 130 || IQ > 139) {
             throw new Excepcion("Ingrese un IQ entre 130 y 139");
         }
-
         this.IQ = IQ;
 
     }

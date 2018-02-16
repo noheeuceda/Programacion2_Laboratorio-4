@@ -9,20 +9,31 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
+import java.util.*;
+
 public class Programacion2_Laboratorio4 {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-       
-           
-        
-        
-        
-        
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) throws Excepcion {
+
+        GorillaMontaña gm = new GorillaMontaña();
+        boolean f = true;
+        while (f) {
+            try {
+                System.out.println("Ingrese un numero");
+                int num = sc.nextInt();
+                gm.setIQ(num);
+                f = false;
+            } catch (Excepcion e) {
+                System.out.println("No se aceptan");
+                f = true;
+            }
+        }
     }
-    
     
     
 }

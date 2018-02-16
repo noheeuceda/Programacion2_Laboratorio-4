@@ -9,7 +9,7 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Persona {
+public class SeresVivos {
 
     protected String nombre;
     protected String gruposanguineo;
@@ -17,10 +17,10 @@ public class Persona {
     protected int altura;
     protected int peso;
 
-    public Persona() {
+    public SeresVivos() {
     }
 
-    public Persona(String nombre, String gruposanguineo, String sexo, int altura, int peso) {
+    public SeresVivos(String nombre, String gruposanguineo, String sexo, int altura, int peso) {
         this.nombre = nombre;
         this.gruposanguineo = gruposanguineo;
         this.sexo = sexo;
@@ -70,9 +70,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", gruposanguineo=" + gruposanguineo + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
+        return "SeresVivos{" + "nombre=" + nombre + ", gruposanguineo=" + gruposanguineo + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
     }
-    
-    
 
 }

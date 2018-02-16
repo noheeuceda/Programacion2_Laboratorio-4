@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Jamil
  */
-public class Ingeniero extends Persona {
+public class Ingeniero extends SeresVivos {
 
     private String correoelectronico;
     private String usuario;

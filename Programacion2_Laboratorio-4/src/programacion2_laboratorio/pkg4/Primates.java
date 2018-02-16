@@ -9,7 +9,7 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Primates extends Persona {
+public class Primates extends SeresVivos {
 
     protected String AreaAsignada;
     protected int cantidadcomida;
@@ -63,7 +63,5 @@ public class Primates extends Persona {
     public String toString() {
         return "Primates{" + "AreaAsignada=" + AreaAsignada + ", cantidadcomida=" + cantidadcomida + ", planeta=" + planeta + ", lugarnacimiento=" + lugarnacimiento + '}';
     }
-    
-    
 
 }
