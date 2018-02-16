@@ -25,14 +25,19 @@ public class GorillaMontaña extends Primates {
         return IQ;
     }
 
-    public void setIQ(int IQ) {
+    public void setIQ(int IQ) throws Excepcion {
+
+        if (IQ < 130 || IQ > 139) {
+            throw new Excepcion("Ingrese un IQ entre 130 y 139");
+        }
+
         this.IQ = IQ;
+
     }
 
     @Override
     public String toString() {
         return "GorillaMonta\u00f1a{" + "IQ=" + IQ + '}';
     }
-    
-    
+
 }
