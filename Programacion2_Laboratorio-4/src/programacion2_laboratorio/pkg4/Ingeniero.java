@@ -85,7 +85,15 @@ public class Ingeniero extends SeresVivos {
     public String toString() {
         return "Ingeniero{" + "correoelectronico=" + correoelectronico + ", usuario=" + usuario + ", idiomas=" + idiomas + ", contra=" + contra + ", cafe=" + cafe + ", fecha=" + fecha + '}';
     }
+        @Override
+    public void restarComida(){
+        this.cafe =0;
+    };
 
+    @Override
+    public void reestableComida() {
+    this.cafe=100;
+    };
     
     
     

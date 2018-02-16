@@ -63,5 +63,14 @@ public class Primates extends SeresVivos {
     public String toString() {
         return "Primates{" + "AreaAsignada=" + AreaAsignada + ", cantidadcomida=" + cantidadcomida + ", planeta=" + planeta + ", lugarnacimiento=" + lugarnacimiento + '}';
     }
+    @Override
+    public void restarComida(){
+        this.cantidadcomida =0;
+    };
+
+    @Override
+    public void reestableComida() {
+    this.cantidadcomida=100;
+    };
 
 }

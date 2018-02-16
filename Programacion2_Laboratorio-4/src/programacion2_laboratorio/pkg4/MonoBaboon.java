@@ -33,6 +33,15 @@ public class MonoBaboon extends Primates {
     public String toString() {
         return "MonoBaboon{" + "colorpelo=" + colorpelo + '}';
     }
+    @Override
+    public void restarComida(){
+        this.cantidadcomida =0;
+    };
+
+    @Override
+    public void reestableComida() {
+    this.cantidadcomida=100;
+    };
     
     
 }

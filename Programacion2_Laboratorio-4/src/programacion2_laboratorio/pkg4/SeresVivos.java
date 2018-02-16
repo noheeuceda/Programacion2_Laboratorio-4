@@ -72,6 +72,10 @@ public class SeresVivos {
     public String toString() {
         return "SeresVivos{" + "nombre=" + nombre + ", gruposanguineo=" + gruposanguineo + ", sexo=" + sexo + ", altura=" + altura + ", peso=" + peso + '}';
     }
+    
+    public void restarComida(){};
+
+    public void reestableComida() {};
 
    
 

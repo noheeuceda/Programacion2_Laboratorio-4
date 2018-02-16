@@ -38,5 +38,13 @@ public class GorillaMontaña extends Primates {
     public String toString() {
         return "GorillaMonta\u00f1a{" + "IQ=" + IQ + '}';
     }
+    @Override
+    public void restarComida(){
+        this.cantidadcomida =0;
+    };
 
+    @Override
+    public void reestableComida() {
+    this.cantidadcomida=100;
+    };
 }
