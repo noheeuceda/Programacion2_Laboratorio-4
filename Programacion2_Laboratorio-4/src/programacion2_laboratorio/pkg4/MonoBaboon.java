@@ -16,7 +16,7 @@ public class MonoBaboon extends Primates {
     public MonoBaboon() {
     }
 
-    public MonoBaboon(String colorpelo, String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, int altura, int peso) {
+    public MonoBaboon(String colorpelo, String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, double altura, double peso) {
         super(AreaAsignada, cantidadcomida, planeta, lugarnacimiento, nombre, gruposanguineo, sexo, altura, peso);
         this.colorpelo = colorpelo;
     }

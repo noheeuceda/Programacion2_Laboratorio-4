@@ -16,7 +16,7 @@ public class GorillaMontaña extends Primates {
     public GorillaMontaña() {
     }
 
-    public GorillaMontaña(int IQ, String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, int altura, int peso) {
+    public GorillaMontaña(int IQ, String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, double altura, double peso) {
         super(AreaAsignada, cantidadcomida, planeta, lugarnacimiento, nombre, gruposanguineo, sexo, altura, peso);
         this.IQ = IQ;
     }
