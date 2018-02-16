@@ -9,20 +9,13 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Programacion2_Laboratorio4 {
+public class Excepcion extends Exception {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
-           
-        
-        
-        
-        
+    private String mensaje;
+
+    public Excepcion(String mensaje) {
+        super(mensaje);
+        this.mensaje = mensaje;
     }
-    
-    
-    
+
 }
