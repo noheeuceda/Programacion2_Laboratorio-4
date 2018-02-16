@@ -13,4 +13,24 @@ public class Cohete {
 
     private int separadores;
 
+    public Cohete(int separadores) {
+        this.separadores = separadores;
+    }
+
+    public Cohete() {
+    }
+
+    public int getSeparadores() {
+        return separadores;
+    }
+
+    public void setSeparadores(int separadores) {
+        this.separadores = separadores;
+    }
+
+    @Override
+    public String toString() {
+        return "Cohete{" + "separadores=" + separadores + '}';
+    }
+
 }
