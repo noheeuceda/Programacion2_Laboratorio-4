@@ -17,7 +17,8 @@ public class Helicoptero extends AereoNormal {
     public Helicoptero() {
     }
 
-    public Helicoptero(int helices, int patas) {
+    public Helicoptero(int helices, int patas, String tipogasolina, String paispartida, String paisllegada, double indicadortanque, double distancia, double altitud) {
+        super(tipogasolina, paispartida, paisllegada, indicadortanque, distancia, altitud);
         this.helices = helices;
         this.patas = patas;
     }
@@ -43,4 +44,15 @@ public class Helicoptero extends AereoNormal {
         return "Helicoptero{" + "helices=" + helices + ", patas=" + patas + '}';
     }
 
+    @Override
+    public double restarcombustible() {
+        this.indicadortanque = 0;
+        return indicadortanque - 100.00;
+    }
+
+    @Override
+    public double reestablecercombustible() {
+        this.indicadortanque = 100.00;
+        return indicadortanque = 100.00;
+    }
 }

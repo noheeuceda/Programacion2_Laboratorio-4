@@ -54,4 +54,16 @@ public class AereoNormal extends MedioTransporte {
         return "AereoNormal{" + "tipogasolina=" + tipogasolina + ", paispartida=" + paispartida + ", paisllegada=" + paisllegada + '}';
     }
 
+    @Override
+    public double restarcombustible() {
+        this.indicadortanque = 0;
+        return indicadortanque - 100.00;
+    }
+
+    @Override
+    public double reestablecercombustible() {
+        this.indicadortanque = 100.00;
+        return indicadortanque = 100.00;
+    }
+
 }

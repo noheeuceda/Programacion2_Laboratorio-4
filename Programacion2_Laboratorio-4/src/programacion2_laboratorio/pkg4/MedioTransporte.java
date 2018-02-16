@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class MedioTransporte {
 
-    protected double indicadortanque;
+    protected double indicadortanque = 100.00;
     protected double distancia;
     protected double altitud;
     protected ArrayList<Primates> primates = new ArrayList();
@@ -62,6 +62,16 @@ public class MedioTransporte {
     @Override
     public String toString() {
         return "MedioTransporte{" + "indicadortanque=" + indicadortanque + ", distancia=" + distancia + ", altitud=" + altitud + ", primates=" + primates + '}';
+    }
+
+    public double restarcombustible() {
+        this.indicadortanque = 0;
+        return indicadortanque - 100.00;
+    }
+
+    public double reestablecercombustible() {
+        this.indicadortanque = 100.00;
+        return indicadortanque = 100.00;
     }
 
 }

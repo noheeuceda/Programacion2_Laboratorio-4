@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package programacion2_laboratorio.pkg4;
 
 import java.text.DateFormat;
@@ -35,6 +30,7 @@ public class Principal {
                 case 1:
                     System.out.println("Ingrese Nombre");
                     nombre = sc.next();
+
                     System.out.println("Ingrese Grupo Sanguineo");
                     grupoSanguineo = sc.next();
                     System.out.println("Ingrese sexo");
@@ -268,15 +264,19 @@ public class Principal {
                             }
                         }
 
-                        break;
-                    
-                    default:
+                    }
+
+                    break;
+
+                default:
                     System.out.println("Opcion Invalida");
                     break;
             }
             System.out.println("Desea regresar al menu? (s/n)");
-                    opcion = sc.next().charAt(0);
-            }
+            opcion = sc.next().charAt(0);
         }
-
     }
+
+}
+
+
