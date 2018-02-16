@@ -9,11 +9,12 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Cohete {
+public class Cohete extends Espacial {
 
     private int separadores;
 
-    public Cohete(int separadores) {
+    public Cohete(int separadores, String tipocombustible, String planetapartida, String planetallegada, double indicadortanque, double distancia, double altitud) {
+        super(tipocombustible, planetapartida, planetallegada, indicadortanque, distancia, altitud);
         this.separadores = separadores;
     }
 
@@ -33,4 +34,8 @@ public class Cohete {
         return "Cohete{" + "separadores=" + separadores + '}';
     }
 
+    @Override
+    public double restarcombustible() {
+        return indicadortanque;
+    }
 }

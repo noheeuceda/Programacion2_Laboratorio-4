@@ -34,4 +34,8 @@ public class NaveEspacial extends Espacial {
         return "NaveEspacial{" + "propulsores=" + propulsores + '}';
     }
 
+    @Override
+    public double restarcombustible() {
+        return indicadortanque;
+    }
 }

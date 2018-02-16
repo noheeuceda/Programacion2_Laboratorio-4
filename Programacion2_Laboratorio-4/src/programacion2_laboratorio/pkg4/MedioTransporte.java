@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Jamil
  */
-public class MedioTransporte {
+public  class MedioTransporte {
 
     protected double indicadortanque;
     protected double distancia;
@@ -62,6 +62,10 @@ public class MedioTransporte {
     @Override
     public String toString() {
         return "MedioTransporte{" + "indicadortanque=" + indicadortanque + ", distancia=" + distancia + ", altitud=" + altitud + ", primates=" + primates + '}';
+    }
+    
+    public double restarcombustible() {
+        return indicadortanque;
     }
 
 }

@@ -54,4 +54,9 @@ public class Espacial extends MedioTransporte {
         return "Espacial{" + "tipocombustible=" + tipocombustible + ", planetapartida=" + planetapartida + ", planetallegada=" + planetallegada + '}';
     }
 
+    @Override
+    public double restarcombustible() {
+        return indicadortanque;
+    }
+
 }

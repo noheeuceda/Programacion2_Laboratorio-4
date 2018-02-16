@@ -17,10 +17,12 @@ public class AvionComercial extends AereoNormal {
     public AvionComercial() {
     }
 
-    public AvionComercial(int pasajeros, boolean pilotoautomatico) {
+    public AvionComercial(int pasajeros, boolean pilotoautomatico, String tipogasolina, String paispartida, String paisllegada, double indicadortanque, double distancia, double altitud) {
+        super(tipogasolina, paispartida, paisllegada, indicadortanque, distancia, altitud);
         this.pasajeros = pasajeros;
         this.pilotoautomatico = pilotoautomatico;
     }
+
 
     public int getPasajeros() {
         return pasajeros;
@@ -41,6 +43,10 @@ public class AvionComercial extends AereoNormal {
     @Override
     public String toString() {
         return "AvionComercial{" + "pasajeros=" + pasajeros + ", pilotoautomatico=" + pilotoautomatico + '}';
+    }
+    @Override
+     public double restarcombustible(){
+         return indicadortanque;
     }
 
 }
