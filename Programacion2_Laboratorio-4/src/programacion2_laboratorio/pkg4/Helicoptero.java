@@ -9,16 +9,9 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Programacion2_Laboratorio4 {
+public class Helicoptero extends AereoNormal{
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
-        
-        
-        
-    }
-    
+    private int helices;
+    private int patas;
+
 }

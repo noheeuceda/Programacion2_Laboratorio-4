@@ -5,20 +5,19 @@
  */
 package programacion2_laboratorio.pkg4;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Jamil
  */
-public class Programacion2_Laboratorio4 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
-        
-        
-        
-    }
+public class MedioTransporte {
+    
+    protected double indicadortanque;
+    protected double distancia;
+    protected double altitud;
+    protected ArrayList <Primates> primates = new ArrayList();
+    
+    
     
 }

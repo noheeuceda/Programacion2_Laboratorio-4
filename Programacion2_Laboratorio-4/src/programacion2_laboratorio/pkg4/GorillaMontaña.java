@@ -9,16 +9,8 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Programacion2_Laboratorio4 {
+public class GorillaMontaña extends Primates {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
-        
-        
-        
-    }
+    private int IQ;
     
 }

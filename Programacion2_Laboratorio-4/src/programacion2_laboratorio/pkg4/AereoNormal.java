@@ -9,16 +9,9 @@ package programacion2_laboratorio.pkg4;
  *
  * @author Jamil
  */
-public class Programacion2_Laboratorio4 {
+public class AereoNormal extends MedioTransporte {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-       
-        
-        
-        
-    }
-    
+    protected String tipogasolina;
+    protected String paispartida;
+    protected String paisllegada;
 }
