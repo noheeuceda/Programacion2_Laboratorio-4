@@ -24,7 +24,7 @@ public class Ingeniero extends SeresVivos {
     public Ingeniero() {
     }
 
-    public Ingeniero(String correoelectronico, String usuario, String contra, int cafe, Date fecha, String nombre, String gruposanguineo, String sexo, int altura, int peso) {
+    public Ingeniero(String correoelectronico, String usuario, String contra, int cafe, Date fecha, String nombre, String gruposanguineo, String sexo, double altura, double peso) {
         super(nombre, gruposanguineo, sexo, altura, peso);
         this.correoelectronico = correoelectronico;
         this.usuario = usuario;

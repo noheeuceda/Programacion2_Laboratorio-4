@@ -19,7 +19,7 @@ public class Primates extends SeresVivos {
     public Primates() {
     }
 
-    public Primates(String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, int altura, int peso) {
+    public Primates(String AreaAsignada, int cantidadcomida, String planeta, String lugarnacimiento, String nombre, String gruposanguineo, String sexo, double altura, double peso) {
         super(nombre, gruposanguineo, sexo, altura, peso);
         this.AreaAsignada = AreaAsignada;
         this.cantidadcomida = cantidadcomida;
