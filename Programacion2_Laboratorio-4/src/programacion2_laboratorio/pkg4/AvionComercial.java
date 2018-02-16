@@ -45,8 +45,14 @@ public class AvionComercial extends AereoNormal {
         return "AvionComercial{" + "pasajeros=" + pasajeros + ", pilotoautomatico=" + pilotoautomatico + '}';
     }
     @Override
-     public double restarcombustible(){
-         return indicadortanque;
+   public double restarcombustible() {
+        this.indicadortanque = 0;
+        return indicadortanque - 100.00;
     }
 
+    @Override
+    public double reestablecercombustible() {
+        this.indicadortanque = 100.00;
+        return indicadortanque = 100.00;
+    }
 }

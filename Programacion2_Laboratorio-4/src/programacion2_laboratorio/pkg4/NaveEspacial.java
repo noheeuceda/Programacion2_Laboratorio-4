@@ -36,6 +36,13 @@ public class NaveEspacial extends Espacial {
 
     @Override
     public double restarcombustible() {
-        return indicadortanque;
+        this.indicadortanque = 0;
+        return indicadortanque - 100.00;
+    }
+
+    @Override
+    public double reestablecercombustible() {
+        this.indicadortanque = 100.00;
+        return indicadortanque = 100.00;
     }
 }
