@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
-import static programacion2_laboratorio.pkg4.Programacion2_Laboratorio4.sc;
+
 
 /**
  *
@@ -160,9 +160,9 @@ public class Principal {
                                                     System.out.println("Ingrese sexo");
                                                     sexo = sc.next();
                                                     System.out.println("Ingrese Altura");
-                                                    altura = sc.nextInt();
+                                                    altura = sc.nextDouble();
                                                     System.out.println("Ingrese peso");
-                                                    peso = sc.nextInt();
+                                                    peso = sc.nextDouble();
                                                     System.out.println("Ingrese Area designada");
                                                     areaDesignada = sc.next();
                                                     System.out.println("Ingrese Cantidad Comida");
@@ -211,10 +211,10 @@ public class Principal {
                                                             sexo = sc.next();
                                                             ((MonoBaboon) mn).setSexo(sexo);
                                                             System.out.println("Ingrese Altura");
-                                                            altura = sc.nextInt();
+                                                            altura = sc.nextDouble();
                                                             ((MonoBaboon) mn).setAltura(altura);
                                                             System.out.println("Ingrese peso");
-                                                            peso = sc.nextInt();
+                                                            peso = sc.nextDouble();
                                                             ((MonoBaboon) mn).setPeso(peso);
                                                             System.out.println("Ingrese Area designada");
                                                             areaDesignada = sc.next();
