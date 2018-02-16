@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-
 /**
  *
  * @author euced
@@ -17,9 +16,9 @@ public class Principal {
     public static void main(String[] args) throws ParseException, Excepcion {
         ArrayList<Object> lista = new ArrayList();
         char opcion = 's';
-        int respuesta,opcion2;
+        int respuesta, opcion2;
         String nombre, grupoSanguineo, sexo, email, username, password, fecha, areaDesignada, planeta, cPelo;
-        int  cantidadCafe, cantidadComida, iq, lugar;
+        int cantidadCafe, cantidadComida, iq, lugar;
         double altura, peso;
         Date fechaNacimiento;
         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
@@ -147,7 +146,7 @@ public class Principal {
                                     respuesta = sc.nextInt();
                                     switch (respuesta) {
                                         case 1:
-                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modifica");
+                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modifica \n 4.Listar");
                                             respuesta = sc.nextInt();
 
                                             switch (respuesta) {
@@ -177,21 +176,17 @@ public class Principal {
                                                     lista.add(mb);
                                                     break;
                                                 case 2:
-                                                    int cont = 0;
-                                                    for (Object mn : lista) {
-                                                        if (mn instanceof MonoBaboon) {
-                                                            cont++;
-                                                            System.out.println(cont + ". " + mn);
-                                                        }
-                                                    }
                                                     System.out.println("Ingrese nombre de primate a eliminar");
                                                     nombre = sc.next();
                                                     lugar = 0;
                                                     for (Object mn : lista) {
-                                                        if (((MonoBaboon) mn).getNombre().equals(nombre)) {
-                                                            lugar = lista.indexOf(mn);
+                                                        if (mn instanceof MonoBaboon) {
+                                                            if (((MonoBaboon) mn).getNombre().equals(nombre)) {
+                                                                lugar = lista.indexOf(mn);
 
+                                                            }
                                                         }
+
                                                     }
                                                     lista.remove(lugar);
                                                     break;
@@ -233,14 +228,28 @@ public class Principal {
                                                             ((MonoBaboon) mn).setLugarnacimiento(fecha);
                                                         }
                                                     }
+                                                  break;
 
+                                                case 4:
+                                                    int cont = 0;
+                                                    for (Object mn : lista) {
+                                                        if (mn instanceof MonoBaboon) {
+                                                            cont++;
+                                                            System.out.println(cont + ". " + mn);
+                                                        }
+                                                    }
                                                     break;
 
                                                 default:
                                                     System.out.println("Opcion Incorrecta");
+                                                    break;
                                             }
+                                           
+                                        
+                                        
                                         case 2:
-                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modifica");
+
+                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modificar ");
                                             respuesta = sc.nextInt();
 
                                             switch (respuesta) {
@@ -253,9 +262,9 @@ public class Principal {
                                                     System.out.println("Ingrese sexo");
                                                     sexo = sc.next();
                                                     System.out.println("Ingrese Altura");
-                                                    altura = sc.nextInt();
+                                                    altura = sc.nextDouble();
                                                     System.out.println("Ingrese peso");
-                                                    peso = sc.nextInt();
+                                                    peso = sc.nextDouble();
                                                     System.out.println("Ingrese Area designada");
                                                     areaDesignada = sc.next();
                                                     System.out.println("Ingrese Cantidad Comida");
@@ -281,8 +290,11 @@ public class Principal {
                                                     nombre = sc.next();
                                                     lugar = 0;
                                                     for (Object mn : lista) {
-                                                        if (((GorillaMontaña) mn).getNombre().equals(nombre)) {
-                                                            lugar = lista.indexOf(mn);
+                                                        if (mn instanceof GorillaMontaña) {
+                                                            if (((GorillaMontaña) mn).getNombre().equals(nombre)) {
+                                                                lugar = lista.indexOf(mn);
+
+                                                            }
 
                                                         }
                                                     }
@@ -295,7 +307,7 @@ public class Principal {
                                                         if (((GorillaMontaña) mn).getNombre().equals(nombre)) {
                                                             lugar = lista.indexOf(mn);
                                                             System.out.println("Ingrese Nombre");
-                                                            grupoSanguineo = sc.next();
+                                                            nombre = sc.next();
                                                             ((GorillaMontaña) mn).setNombre(nombre);
                                                             System.out.println("Ingrese Grupo Sanguineo");
                                                             grupoSanguineo = sc.next();
@@ -318,7 +330,7 @@ public class Principal {
                                                             System.out.println("Ingrese Planeta designado");
                                                             planeta = sc.next();
                                                             ((GorillaMontaña) mn).setPlaneta(planeta);
-                                                            System.out.println("Ingrese Color Pelo");
+                                                            System.out.println("Ingrese IQ");
                                                             iq = sc.nextInt();
                                                             ((GorillaMontaña) mn).setIQ(iq);
                                                             System.out.println("Ingrese lugar de nacimiento ");
@@ -346,7 +358,7 @@ public class Principal {
                     System.out.println("Opcion Invalida");
                     break;
             }
-            System.out.println("Desea regresar al menu? (s/n)");
+            System.out.println("Desea regresar al menu con su usuario? (s/n)");
             opcion = sc.next().charAt(0);
         }
     }
