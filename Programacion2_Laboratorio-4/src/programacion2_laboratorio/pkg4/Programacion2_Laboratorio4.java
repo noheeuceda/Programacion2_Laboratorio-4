@@ -26,7 +26,7 @@ public class Programacion2_Laboratorio4 {
         char opcion = 's';
         int respuesta,opcion2;
         String nombre, grupoSanguineo, sexo, email, username, password, fecha, areaDesignada, planeta, cPelo;
-        int  cantidadCafe, cantidadComida, iq, lugar;
+        int  cantidadCafe, cantidadComida, iq, lugar, contador=0;
         double altura, peso;
         Date fechaNacimiento;
         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
@@ -343,89 +343,23 @@ public class Programacion2_Laboratorio4 {
                                             respuesta = sc.nextInt();
 
                                             switch (respuesta) {
-
+                                                
                                                 case 1:
-                                                    System.out.println("Ingrese nombre");
-                                                    nombre = sc.next();
-                                                    System.out.println("Ingrese Grupo Sanguineo");
-                                                    grupoSanguineo = sc.next();
-                                                    System.out.println("Ingrese sexo");
-                                                    sexo = sc.next();
-                                                    System.out.println("Ingrese Altura");
-                                                    altura = sc.nextInt();
-                                                    System.out.println("Ingrese peso");
-                                                    peso = sc.nextInt();
-                                                    System.out.println("Ingrese Area designada");
-                                                    areaDesignada = sc.next();
-                                                    System.out.println("Ingrese Cantidad Comida");
-                                                    cantidadComida = sc.nextInt();
-                                                    System.out.println("Ingrese Planeta designado");
-                                                    planeta = sc.next();
-                                                    System.out.println("Ingrese IQ");
-                                                    iq = sc.nextInt();
-                                                    System.out.println("Ingrese lugar de nacimiento ");
-                                                    fecha = sc.next();
-                                                    GorillaMontaña gm = new GorillaMontaña(iq, areaDesignada, cantidadComida, planeta, fecha, nombre, grupoSanguineo, sexo, altura, peso);
-                                                    lista.add(gm);
-                                                    break;
-                                                case 2:
-                                                    int cont = 0;
-                                                    for (Object mn : lista) {
-                                                        if (mn instanceof GorillaMontaña) {
-                                                            cont++;
-                                                            System.out.println(cont + ". " + mn);
+                                                    
+                                                    for (Object mt : lista) {
+                                                        contador++;
+                                                        if (mt instanceof MedioTransporte ) {
+                                                            if (((MedioTransporte)(mt)).getIndicadortanque()>0) {
+                                                                System.out.println(contador+" "+mt);
+                                                            }
+                                                            
                                                         }
+                                                        
                                                     }
-                                                    System.out.println("Ingrese nombre de primate a eliminar");
-                                                    nombre = sc.next();
-                                                    lugar = 0;
-                                                    for (Object mn : lista) {
-                                                        if (((GorillaMontaña) mn).getNombre().equals(nombre)) {
-                                                            lugar = lista.indexOf(mn);
-
-                                                        }
-                                                    }
-                                                    lista.remove(lugar);
+                                                    
+                                                    
                                                     break;
-                                                case 3:
-                                                    System.out.println("Ingrese nombre de primate a modificar");
-                                                    nombre = sc.next();
-                                                    for (Object mn : lista) {
-                                                        if (((GorillaMontaña) mn).getNombre().equals(nombre)) {
-                                                            lugar = lista.indexOf(mn);
-                                                            System.out.println("Ingrese Nombre");
-                                                            grupoSanguineo = sc.next();
-                                                            ((GorillaMontaña) mn).setNombre(nombre);
-                                                            System.out.println("Ingrese Grupo Sanguineo");
-                                                            grupoSanguineo = sc.next();
-                                                            ((GorillaMontaña) mn).setGruposanguineo(grupoSanguineo);
-                                                            System.out.println("Ingrese sexo");
-                                                            sexo = sc.next();
-                                                            ((GorillaMontaña) mn).setSexo(sexo);
-                                                            System.out.println("Ingrese Altura");
-                                                            altura = sc.nextInt();
-                                                            ((GorillaMontaña) mn).setAltura(altura);
-                                                            System.out.println("Ingrese peso");
-                                                            peso = sc.nextInt();
-                                                            ((GorillaMontaña) mn).setPeso(peso);
-                                                            System.out.println("Ingrese Area designada");
-                                                            areaDesignada = sc.next();
-                                                            ((GorillaMontaña) mn).setAreaAsignada(areaDesignada);
-                                                            System.out.println("Ingrese Cantidad Comida");
-                                                            cantidadComida = sc.nextInt();
-                                                            ((GorillaMontaña) mn).setCantidadcomida(cantidadComida);
-                                                            System.out.println("Ingrese Planeta designado");
-                                                            planeta = sc.next();
-                                                            ((GorillaMontaña) mn).setPlaneta(planeta);
-                                                            System.out.println("Ingrese Color Pelo");
-                                                            iq = sc.nextInt();
-                                                            ((GorillaMontaña) mn).setIQ(iq);
-                                                            System.out.println("Ingrese lugar de nacimiento ");
-                                                            fecha = sc.next();
-                                                            ((GorillaMontaña) mn).setLugarnacimiento(fecha);
-                                                        }
-                                                    }
-                                                    break;
+                                                
                                                 default:
                                                     System.out.println("Opcion Invalida");
                                             }
