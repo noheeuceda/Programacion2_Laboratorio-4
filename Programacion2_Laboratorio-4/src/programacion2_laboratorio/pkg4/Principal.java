@@ -18,7 +18,7 @@ public class Principal {
         char opcion = 's';
         int respuesta, opcion2;
         String nombre, grupoSanguineo, sexo, email, username, password, fecha, areaDesignada, planeta, cPelo;
-        int cantidadCafe, cantidadComida, iq, lugar;
+        int cantidadCafe, cantidadComida, iq, lugar,contador=0;
         double altura, peso;
         Date fechaNacimiento;
         DateFormat df = new SimpleDateFormat("yyyy/MM/dd");
@@ -344,7 +344,30 @@ public class Principal {
                                             }
                                             break;
                                         case 4:
+                                            System.out.println("Viajes \n 1. Agregar \n 2.Eliminar \n 3. Listar");
+                                            respuesta = sc.nextInt();
 
+                                            switch (respuesta) {
+                                                
+                                                case 1:
+                                                    
+                                                    for (Object mt : lista) {
+                                                        contador++;
+                                                        if (mt instanceof MedioTransporte ) {
+                                                            if (((MedioTransporte)(mt)).getIndicadortanque()>0) {
+                                                                System.out.println(contador+" "+mt);
+                                                            }
+                                                            
+                                                        }
+                                                        
+                                                    }
+                                                    
+                                                    
+                                                    break;
+                                                
+                                                default:
+                                                    System.out.println("Opcion Invalida");
+                                            }
                                             break;
                                     }
                             }
