@@ -21,7 +21,9 @@ public class Programacion2_Laboratorio4 {
      */
     static Scanner sc = new Scanner(System.in);
 
+
     public static void main(String[] args) throws Excepcion, ParseException { //throws Excepcion { 
+
       ArrayList<Object> lista = new ArrayList();
         char opcion = 's';
         int respuesta,opcion2;
