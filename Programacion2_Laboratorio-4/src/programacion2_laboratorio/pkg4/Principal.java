@@ -140,13 +140,14 @@ public class Principal {
                                     }
                                     break;
                                 case 2:
+
                                     break;
                                 case 3:
                                     System.out.println("Menu: \n 1. Mono Baboon \n 2. Gorilla Montaña");
                                     respuesta = sc.nextInt();
                                     switch (respuesta) {
                                         case 1:
-                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modifica \n 4.Listar");
+                                            System.out.println("1. Agregar Mono Baboon \n 2. Eliminar \n 3. Modificar Mono Baboon \n 4.Listar");
                                             respuesta = sc.nextInt();
 
                                             switch (respuesta) {
@@ -228,7 +229,7 @@ public class Principal {
                                                             ((MonoBaboon) mn).setLugarnacimiento(fecha);
                                                         }
                                                     }
-                                                  break;
+                                                    break;
 
                                                 case 4:
                                                     int cont = 0;
@@ -244,12 +245,9 @@ public class Principal {
                                                     System.out.println("Opcion Incorrecta");
                                                     break;
                                             }
-                                           
-                                        
-                                        
-                                        case 2:
 
-                                            System.out.println("1. Agregar \n 2.Eliminar \n 3.Modificar ");
+                                        case 2:
+                                            System.out.println("1 . Agregar Gorilla Montaña \n 2 .Eliminar \n 3 .Modificar Gorilla Montaña \n 4. Listar");
                                             respuesta = sc.nextInt();
 
                                             switch (respuesta) {
@@ -278,14 +276,9 @@ public class Principal {
                                                     GorillaMontaña gm = new GorillaMontaña(iq, areaDesignada, cantidadComida, planeta, fecha, nombre, grupoSanguineo, sexo, altura, peso);
                                                     lista.add(gm);
                                                     break;
+
                                                 case 2:
-                                                    int cont = 0;
-                                                    for (Object mn : lista) {
-                                                        if (mn instanceof GorillaMontaña) {
-                                                            cont++;
-                                                            System.out.println(cont + ". " + mn);
-                                                        }
-                                                    }
+
                                                     System.out.println("Ingrese nombre de primate a eliminar");
                                                     nombre = sc.next();
                                                     lugar = 0;
@@ -339,6 +332,17 @@ public class Principal {
                                                         }
                                                     }
                                                     break;
+
+                                                case 4:
+                                                    int cont = 0;
+                                                    for (Object mn : lista) {
+                                                        if (mn instanceof GorillaMontaña) {
+                                                            cont++;
+                                                            System.out.println(cont + ". " + mn);
+                                                        }
+                                                    }
+                                                    break;
+
                                                 default:
                                                     System.out.println("Opcion Invalida");
                                             }
