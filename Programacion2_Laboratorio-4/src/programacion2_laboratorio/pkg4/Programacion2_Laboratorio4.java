@@ -20,7 +20,7 @@ public class Programacion2_Laboratorio4 {
      */
     static Scanner sc = new Scanner(System.in);
 
-    public static void main(String[] args) { //throws Excepcion { 
+    public static void main(String[] args) throws Excepcion { //throws Excepcion { 
       ArrayList<Object> lista = new ArrayList();
         char opcion = 's';
         int respuesta,opcion2;
@@ -324,7 +324,7 @@ public class Programacion2_Laboratorio4 {
                                                             System.out.println("Ingrese Planeta designado");
                                                             planeta = sc.next();
                                                             ((GorillaMontaña) mn).setPlaneta(planeta);
-                                                            System.out.println("Ingrese Color Pelo");
+                                                            System.out.println("IQ");
                                                             iq = sc.nextInt();
                                                             ((GorillaMontaña) mn).setIQ(iq);
                                                             System.out.println("Ingrese lugar de nacimiento ");
